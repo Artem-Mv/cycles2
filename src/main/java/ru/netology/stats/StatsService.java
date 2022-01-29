@@ -12,12 +12,7 @@ public class StatsService {
 
     //2
     public long average(long[] purchases) {
-        long averageSum = 0;
-        for (long purchase : purchases) {
-            averageSum += purchase;
-        }
-
-        return averageSum / purchases.length;
+        return calculateSum(purchases) / purchases.length;
     }
 
     //3
@@ -48,16 +43,9 @@ public class StatsService {
 
     //5
     public int averageMin(long[] purchases) {
-        long averageSum = 0;
-        long res = 0; //среднее значение
-
+       int i = 0;
         for (long purchase : purchases) {
-            averageSum = averageSum + purchase;
-            res = averageSum / purchases.length;
-        }
-        int i = 0;
-        for (long purchase : purchases) {
-            if (purchase < res) {
+            if (purchase < average(purchases)) {
                 i = i + 1;
             }
         }
@@ -67,20 +55,14 @@ public class StatsService {
 
     //6
     public int averageMax(long[] purchases) {
-        long averageSum = 0;
-        long result = 0; //среднее значение
-
-        for (long purchase : purchases) {
-            averageSum = averageSum + purchase;
-            result = averageSum / purchases.length;
-        }
         int i = 0;
         for (long purchase : purchases) {
-            if (purchase > result) {
+            if (purchase > average(purchases)) {
                 i = i + 1;
             }
         }
 
         return i;
     }
+
 }

@@ -29,6 +29,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void maxSales() {
         StatsService service = new StatsService();
@@ -40,6 +41,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void minSales() {
         StatsService service = new StatsService();
@@ -51,6 +53,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void averageMin() {
         StatsService service = new StatsService();
@@ -62,6 +65,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     void averageMax() {
         StatsService service = new StatsService();
@@ -73,6 +77,5 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
-
 
 }
